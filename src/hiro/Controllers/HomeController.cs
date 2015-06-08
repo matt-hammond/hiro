@@ -13,6 +13,53 @@ namespace hiro.Controllers
             return View();
         }
 
+           
+        public IActionResult PatientBanner()
+        {
+            return View();
+        }
+
+
+        public IActionResult PatientList()
+        {
+            return View();
+        }
+
+        public IActionResult Address()
+        {
+            return View();
+        }
+
+        public IActionResult TelephoneNumber()
+        {
+            return View();
+        }
+
+        public IActionResult Date()
+        {
+            return View();
+        }
+
+        public IActionResult NhsNumber()
+        {
+            return View();
+        }
+
+        public IActionResult Gender()
+        {
+            return View();
+        }
+
+        public IActionResult PatientName()
+        {
+            return View();
+        }
+
+        public IActionResult Snomed()
+        {
+            return View();
+        }
+
         public IActionResult About()
         {
             ViewBag.Message = "Your application description page.";

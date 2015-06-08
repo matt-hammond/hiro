@@ -1,0 +1,61 @@
+﻿@{
+    ViewBag.Title = "Patient Banner";
+}
+<h1>Address Input and Display</h1>
+<h2>Display</h2>
+<h3>In-form or vertically aligned address</h3>
+<address>
+    18 Orchard Cottage<br/>
+    King’s Road<br/>
+    Ipswich<br/>
+    Northshire<br/>
+    NS33 8KR<br/>
+</address>
+<h3>In-line or horizontally aligned address</h3>
+<address>18 Orchard Cottage, King’s Road, Ipswich, Northshire, NS33 8KR</address>
+<h2>Editing</h2>
+<form class="form-horizontal">
+    <div class="form-group">
+        <label for="addressLine1" class="col-sm-2 control-label">Line 1</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" id="addressLine1" placeholder="e.g. 18 Orchard Cottage">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="addressLine2" class="col-sm-2 control-label">Line 2</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" id="addressLine2" placeholder="e.g. King’s Road">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="addressLine3" class="col-sm-2 control-label">Line 3</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" id="addressLine3" placeholder="e.g. ??">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="addressTown" class="col-sm-2 control-label">Town / City</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" id="addressTown" placeholder="e.g. Ipswich">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="addressCounty" class="col-sm-2 control-label">County</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" id="addressCounty" placeholder="e.g. Northshire">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="addressPostcode" class="col-sm-2 control-label">Postcode</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" id="addressPostcode" placeholder="e.g. NS33 8KR">
+            <button type="submit" class="btn btn-default">Find Postcode</button>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+            <button type="submit" class="btn btn-default">Sign in</button>
+        </div>
+    </div>
+</form>
