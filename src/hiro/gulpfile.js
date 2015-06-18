@@ -10,7 +10,7 @@ eval("var project = " + fs.readFileSync("./project.json"));
 
 var paths = {
   bower: "./bower_components/",
-  lib: "./" + project.webroot + "/lib/"
+  lib: "./" + project.webroot + "/assets/lib/"
 };
 
 gulp.task("clean", function (cb) {
@@ -35,7 +35,12 @@ gulp.task("copy", ["clean"], function () {
 
 
 gulp.task("sass-compile", function () {
-    gulp.src("./*.scss")
+    gulp.src("./assets/sass/*.scss")
         .pipe(sass({ includePaths: ["./bower_components/boostrap-sass/assets/stylesheets/"] }))
-        .pipe(gulp.dest("./wwwroot/css"));
+        .pipe(gulp.dest("./wwwroot/assets/css"));
+
+    gulp.src("./bower_components/boostrap-sass/assets/fonts/bootstrap/*.*")
+    .pipe(gulp.dest("./wwwroot/assets/fonts"));
+    gulp.src("./bower_components/boostrap-sass/assets/javascripts/bootstrap.min.js")
+        .pipe(gulp.dest("./wwwroot/assets/js"));
 });
