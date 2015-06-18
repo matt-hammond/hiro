@@ -2,7 +2,9 @@
 
 var gulp = require("gulp"),
   rimraf = require("rimraf"),
-  fs = require("fs");
+  fs = require("fs"),
+  sass = require("gulp-sass");
+
 
 eval("var project = " + fs.readFileSync("./project.json"));
 
@@ -29,4 +31,11 @@ gulp.task("copy", ["clean"], function () {
     gulp.src(paths.bower + bower[destinationDir])
       .pipe(gulp.dest(paths.lib + destinationDir));
   }
+});
+
+
+gulp.task("sass-compile", function () {
+    gulp.src("./*.scss")
+        .pipe(sass({ includePaths: ["./bower_components/boostrap-sass/assets/stylesheets/"] }))
+        .pipe(gulp.dest("./wwwroot/css"));
 });
