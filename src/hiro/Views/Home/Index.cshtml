@@ -1,12 +1,16 @@
 ﻿@{
     ViewBag.Title = "Home Page";
 }
-
+<ol class="breadcrumb">
+    <li><a href="#">Home</a></li>
+    <li><a href="#">Library</a></li>
+    <li class="active">Data</li>
+</ol>
 <div class="row">
     <div class="col-md-6">
 
         <h1>CUI Compliance</h1>
-        <ul>
+        <ol>
             <li><a asp-action="PatientBanner">Patient Banner</a></li>
             <li><a asp-action="PatientList">Patient List</a></li>
             <li><a asp-action="Date">Date and Time</a></li>
@@ -16,7 +20,7 @@
             <li><a asp-action="Address">Address Input and Display</a></li>
             <li><a asp-action="TelephoneNumber">Telephone Number Input and Display</a></li>
             <li><a asp-action="Snomed">Snomed</a></li>
-        </ul>
+        </ol>
 
     </div>
 </div>

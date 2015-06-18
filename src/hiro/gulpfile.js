@@ -3,7 +3,8 @@
 var gulp = require("gulp"),
   rimraf = require("rimraf"),
   fs = require("fs"),
-  sass = require("gulp-sass");
+  sass = require("gulp-sass"),
+    livereload = require('gulp-livereload');
 
 
 eval("var project = " + fs.readFileSync("./project.json"));
@@ -42,5 +43,10 @@ gulp.task("sass-compile", function () {
     gulp.src("./bower_components/boostrap-sass/assets/fonts/bootstrap/*.*")
     .pipe(gulp.dest("./wwwroot/assets/fonts"));
     gulp.src("./bower_components/boostrap-sass/assets/javascripts/bootstrap.min.js")
-        .pipe(gulp.dest("./wwwroot/assets/js"));
+        .pipe(gulp.dest("./wwwroot/assets/js")).pipe(livereload());
+});
+
+gulp.task('watch', function () {
+    livereload.listen();
+    gulp.watch('./assets/sass/*.scss', ['sass-compile']);
 });

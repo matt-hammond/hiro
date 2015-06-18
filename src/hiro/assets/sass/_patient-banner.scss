@@ -1,0 +1,23 @@
+.patient-banner {
+    vertical-align:middle;
+    *{
+display:inline;
+    vertical-align:middle;
+    padding:0;
+
+    }
+    p{
+        float:right;
+            vertical-align:middle;
+    }
+    border-bottom:1px solid $nhs-blue;
+
+    i{
+        font-style:italic;
+        font-weight:normal;
+    }
+
+    .row{
+        margin:0px;
+    }
+}
