@@ -14,3 +14,4 @@
 /// <reference path="assets/lib/bootstrap-touch-carousel/js/bootstrap-touch-carousel.js" />
 /// <reference path="assets/lib/jquery-validation/jquery.validate.js" />
 /// <reference path="assets/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js" />
+/// <reference path="assets/lib/bootstrap/js/bootstrap.js" />
